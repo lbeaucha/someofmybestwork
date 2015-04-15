@@ -1,0 +1,18 @@
+bubblesort <- function(v){
+  for(i in 1:(length(v)-1)){
+    for(k in 1:(length(v)-i)){
+      if(v[k]>v[k+1]){
+        a<-v[k]
+        v[k]<-v[k+1]
+        v[k+1]<-a
+      }
+    }
+  }
+  return(v)
+}
+v<-rnorm(5000)
+bubblesort(v)
+v2<-1:5000
+v2[10]<--4
+v2[4900]<-20000
+bubblesort(v2)
